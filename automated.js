@@ -25,14 +25,14 @@ var instructions = function(callback) { async.series(
     },
     function (callback) { 
         client.after(5000, function(){ 
-            this.clockwise(0.5);
+            this.animate('wave',2000);
             console.log("We're moving, Roger that.");
         })
         callback();
     },
     
     function (callback) {
-        client.after(3000, function() {
+        client.after(5000, function() {
             this.stop();
             this.land();
             console.log("We're ready for landing, Roger that, again...");
