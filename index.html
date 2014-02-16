@@ -1,16 +1,17 @@
-<!doctype html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns='http://w3.org/1999/xhtml'>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>AR-Parrot 2.0</title>
     <script src="/dronestream/nodecopter-client.js" type="text/javascript" charset="utf-8"></script>
+    <script src="fullScreen.js" type="text/javascript" charset="utf-8"></script>
+    <script src="keyListener.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <center>
-    <h1 id="heading">Live Stream</h1>
-    <div id = 'droneStream' style: 'width: 1920px; height: 1200px'></div>
+    <div id='droneStream'> </div>
     <script type="text/javascript" charset="utf-8">
-        new NodecopterStream(document.getElementById("droneStream"));
+        var video = new NodecopterStream(document.getElementById("droneStream"));
     </script>
 </center>
 </body>
